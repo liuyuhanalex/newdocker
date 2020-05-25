@@ -12,7 +12,7 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y vim
 RUN pip install pip -U
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-RUN pip --default-timeout=100 install -r requirement.txt
+RUN pip --default-timeout=1000 install -r requirement.txt
 RUN pip install --upgrade ray;
 
 # 环境变量
